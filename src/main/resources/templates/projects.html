@@ -10,13 +10,13 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" max-width="100%">
         <div th:each="project : ${projects}">
             <div th:if="${project.id %2 != 0}">
                 <div class="row">
                     <div class="col-md-4">
                         <a th:href="@{'/projects/' + ${project.title}}">
-                            <img th:src="@{'/images/' + ${project.title} + '.jpg'}" />
+                            <img class="img-thumbnail" th:src="@{'/images/' + ${project.title} + '.jpg'}" />
                         </a>
                     </div>
                     <div class="col-md-8">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-md-4">
                         <a th:href="@{'/projects/' + ${project.title}}">
-                            <img th:src="@{'/images/' + ${project.title} + '.jpg'}" />
+                            <img class="img-thumbnail" th:src="@{'/images/' + ${project.title} + '.jpg'}" />
                         </a>
                     </div>
                 </div>
@@ -47,5 +47,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
