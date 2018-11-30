@@ -1,35 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="../static/Eazily-led.css" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <title>Eazily-LED | Home</title>
 </head>
-<body>
-    <div class="navbar">
-        <nav>
-            <div class="container">
-                <a href="./home.html"><img id="brand-image" src="../static/images/Eazily-led logo.png"class="brand-logo" alt="logo"/></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                    <li><a href="./contact.html">Contact us</a></li>
-                </ul>
-                <!--<ul id="mobile-nav" class="side-nav">-->
-                <!--<li class="active"><a th:href="@{/about}">About</a></li>-->
-                <!--<li><a th:href="@{/projects}">Projects</a></li>-->
-                <!--<li><a th:href="@{/contact}">Contact us</a></li>-->
-                <!--</ul>-->
+<body style="font-family: 'Saira Semi Condensed', sans-serif;">
+
+<nav style="background-color:#E8E9EB;">
+    <div class="container" style="padding:1% 6%">
+        <div class="row">
+            <div class="col-md-2">
+                <a th:href="@{/}"><img id="brand-image" src="../images/logo.png" class="img-fluid" alt="logo"/></a>
             </div>
-        </nav>
-    </div>
-    <div class="main-container">
-        <div class="top-main">
-            <img id="home-brand-image" src="../static/images/Eazily-led logo.png"class="brand-logo" alt="logo"/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi dolores, in ipsam laudantium pariatur quam quas quasi sequi. Consequatur, eaque expedita facere illum placeat rerum sequi sit ut vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, assumenda commodi consequatur cupiditate dolores doloribus dolorum eligendi hic laudantium minus, mollitia natus repudiandae tempore temporibus ullam vero voluptate. Alias, iste?</p>
+            <div class="col-md-4">
+                <p></p>
+            </div>
+            <div class="col-md-2 nav-bar-link" style="margin: auto; font-size: 20px; font-weight:bold;">
+                <li style="list-style-type: none;"><a th:href="@{/about}" style=" color: #313638;">About</a></li>
+            </div>
+            <div class="col-md-2 nav-bar-link" style="margin: auto; font-size: 20px; font-weight:bold;">
+                <li style="list-style-type: none;"><a th:href="@{/projects}" style="color: #313638;">Projects</a></li>
+            </div>
+            <div class="col-md-2 nav-bar-link" style="margin: auto; font-size: 20px; font-weight:bold;">
+                <li style="list-style-type: none;"><a th:href="@{/contact}" style=" color: #313638;">Contact us</a></li>
+            </div>
         </div>
     </div>
+</nav>
+
+<div class="main-container">
+    <div class="top-main">
+        <img id="home-brand-image" src="../static/images/Eazily-led logo.png"class="brand-logo" alt="logo"/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi dolores, in ipsam laudantium pariatur quam quas quasi sequi. Consequatur, eaque expedita facere illum placeat rerum sequi sit ut vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, assumenda commodi consequatur cupiditate dolores doloribus dolorum eligendi hic laudantium minus, mollitia natus repudiandae tempore temporibus ullam vero voluptate. Alias, iste?</p>
+    </div>
+</div>
 </body>
 </html>
