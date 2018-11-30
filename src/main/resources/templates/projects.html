@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <title>Eazily-LED | Projects</title>
+</head>
+<body style="font-family: 'Saira Semi Condensed', sans-serif;">
+
+<nav style="background-color:#E8E9EB;">
+    <div class="container" style="padding:1% 6%">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="./home.html"><img id="brand-image" src="../images/logo.png" class="img-fluid" alt="logo"/></a>
+            </div>
+            <div class="col-md-4">
+                <p></p>
+            </div>
+            <div class="col-md-2 nav-bar-link" style="margin: auto; font-size: 20px; font-weight:bold;">
+                <li style="list-style-type: none;"><a href="./about.html" style=" color: #313638;">About</a></li>
+            </div>
+            <div class="col-md-2 nav-bar-link" style="margin: auto; font-size: 20px; font-weight:bold;">
+                <li style="list-style-type: none;"><a href="./projects.html" style="color: #313638;">Projects</a></li>
+            </div>
+            <div class="col-md-2 nav-bar-link" style="margin: auto; font-size: 20px; font-weight:bold;">
+                <li style="list-style-type: none;"><a href="./contact.html" style=" color: #313638;">Contact us</a></li>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class = "container">
+        <div th:each="project : ${projects}">
+            <div th:if="${project.id %2 != 0}">
+                <div class="row" style="padding:2% 6% 1% 6%">
+                    <div class="col-md-4" style="margin:auto">
+                        <a th:href="@{'/projects/' + ${project.title}}">
+                            <img class="img-thumbnail" th:src="@{'/images/' + ${project.title} + '.jpg'}" style=" max-height: 100%"/>
+                        </a>
+                    </div>
+                    <div class="col-md-8" style="margin:auto">
+                        <a th:href="@{'/projects/' + ${project.title}}">
+                            <h4 th:text="${project.title}"></h4>
+                        </a>
+                        <h5 th:text="'Uploaded on ' + ${project.date}"></h5>
+                        <p th:text="${project.description}"></p>
+                    </div>
+                </div>
+            </div>
+            <div th:if="${project.id %2 == 0}">
+                <div class="row" style="padding:2% 6% 1% 6%">
+                    <div class="col-md-8" style="margin:auto">
+                        <a th:href="@{'/projects/' + ${project.title}}">
+                            <h4 th:text="${project.title}"></h4>
+                        </a>
+                        <h5 th:text="'Uploaded on ' + ${project.date}"></h5>
+                        <p th:text="${project.description}"></p>
+                    </div>
+                    <div class="col-md-4" style="margin:auto">
+                        <a th:href="@{'/projects/' + ${project.title}}">
+                            <img class="img-thumbnail" th:src="@{'/images/' + ${project.title} + '.jpg'}" style=" max-height: 100%" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
