@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
-    <title>Eazily-LED | Home</title>
+    <title th:text="'Eazily-LED | ' + ${project.title}">Eazily-LED | Home</title>
 </head>
 <body style="font-family: 'Saira Semi Condensed', sans-serif;">
 
@@ -34,11 +34,19 @@
     </div>
 </nav>
 
-<div class="main-container">
-    <div class="top-main">
-        <img id="home-brand-image" th:src="@{/images/logo.png}" alt="logo"/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi dolores, in ipsam laudantium pariatur quam quas quasi sequi. Consequatur, eaque expedita facere illum placeat rerum sequi sit ut vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, assumenda commodi consequatur cupiditate dolores doloribus dolorum eligendi hic laudantium minus, mollitia natus repudiandae tempore temporibus ullam vero voluptate. Alias, iste?</p>
+<div class="container">
+    <div class="row" style="padding:2% 6% 1% 6%">
+        <div class="col-md-12">
+            <h1 th:text="${project.title}"></h1>
+        </div>
+        <div class="row" style="padding:2% 6% 1% 6%">
+            <img th:src="@{'/images/' + ${project.title} + '.jpg'}" style="margin:auto"/>
+        </div>
+        <div class="row" style="padding:2% 6% 1% 6%">
+            <p th:text="${project.largeDescription}"></p>
+        </div>
     </div>
 </div>
+
 </body>
 </html>
