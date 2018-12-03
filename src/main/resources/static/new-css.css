@@ -9,7 +9,6 @@ body {
     margin-top:-8px;
     margin-left:-8px;
     padding-top:10px;
-
     width:100%;
     background-color:#E8E9EB;
     justify-content:space-between;
@@ -46,19 +45,20 @@ nav ul li a:hover {
 .main-container {
     width:90%;
     text-align:center;
+    margin-top:50px;
 }
 .top-main {
     display:inline-block;
-    margin-top:50px;
 }
 .top-main p {
     display: inline-block;
     vertical-align: middle;
     width:60%;
     float:right;
-
+    font-size:20px;
+    margin-top:60px;
 }
 #home-brand-image {
-    width:300px;
-    height:200px;
+    width:450px;
+    height:300px;
 }
