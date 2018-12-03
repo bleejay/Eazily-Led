@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-
     <title>Eazily-LED | Contact Us</title>
 </head>
 <body style="font-family: 'Saira Semi Condensed', sans-serif;">
@@ -36,6 +33,29 @@
 
 <div class="main-container">
     <h1>Contact us</h1>
+    <form th:action="@{/ContactRequest}" method="POST">
+        <div class="label">Name:</div>
+        <div class="field">
+            <input type="text" name="name"  title="Please enter your name">
+        </div>
+        <div class="label">Email:</div>
+        <div class="field">
+            <input type="text" name="email"  title="Please enter your email address">
+        </div>
+        <div class="label">Subject:</div>
+        <div class="field">
+            <input type="text" name="subject" title="Please enter your name">
+        </div>
+        <div class="label">Contact Number:</div>
+        <div class="field">
+            <input type="text" name="phone" title="Please enter your phone number">
+        </div>
+        <div class="label">Message:</div>
+        <div class="field">
+            <textarea id="about-project" name="message"></textarea>
+        </div>
+        <input type="submit" name="submit" value="Send Message" id="send-message" style="clear: both;">
+    </form>
 </div>
 </body>
 </html>

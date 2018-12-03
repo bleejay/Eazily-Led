@@ -1,14 +1,16 @@
 package com.jlb.controller;
 
 import com.jlb.data.ProjectRepository;
+import com.jlb.model.Contact;
 import com.jlb.model.Project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.config.annotation.RedirectViewControllerRegistration;
+import org.springframework.web.servlet.view.RedirectView;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -44,5 +46,9 @@ public class ProjectController {
     @GetMapping("/contact")
     public String contactPage(){
         return "contact";
+    }
+    @RequestMapping(value = "/ContactRequest", method = RequestMethod.POST)
+    public RedirectView contactRequest (@Valid @ModelAttribute("Contact") Contact contact){
+        return new RedirectView("contact");
     }
 }
