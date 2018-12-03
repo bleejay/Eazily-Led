@@ -9,35 +9,29 @@ public class Project {
     private String title;
     private LocalDate date;
     private int time;
-    private String description;
+    private String smallDescription;
+    private String largeDescription;
 
-    public Project(int id, String title, LocalDate date, int time, String description) {
+    public Project(int id, String title, LocalDate date, int time, String smallDescription, String largeDescription) {
         this.id = id;
         this.title = title;
         this.date = date;
         this.time = time;
-        this.description = description;
+        this.smallDescription = smallDescription;
+        this.largeDescription = largeDescription;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int id) { this.id = id; }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public void setTitle(String title) { this.title = title; }
 
-    public LocalDate getDate() {
-        return date;
-    }
+    public LocalDate getDate() { return date; }
 
     public void setDate(LocalDate date) {
         this.date = date;
@@ -51,11 +45,15 @@ public class Project {
         this.time = time;
     }
 
-    public String getDescription() {
-        return description;
+    public String getSmallDescription() {
+        return smallDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setSmallDescription(String smallDescription) {
+        this.smallDescription = smallDescription;
     }
+
+    public String getLargeDescription() { return largeDescription; }
+
+    public void setLargeDescription(String largeDescription) { this.largeDescription = largeDescription; }
 }
