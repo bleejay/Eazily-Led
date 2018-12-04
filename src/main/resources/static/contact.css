@@ -1,0 +1,15 @@
+form {
+float:left;
+}
+input {
+width:80%;
+}
+textarea {
+    height:400px;
+    width:400px;
+}
+.business-info {
+    float:right;
+    font-weight:bold;
+    color:#313638;
+}
