@@ -31,7 +31,7 @@
     </div>
 </nav>
 
-<div class="main-container">
+<div class="container" style="padding:2% 6% 1% 6%">
     <h1>Contact us</h1>
     <form th:action="@{/ContactRequest}" method="POST">
         <div class="label">Name:</div>
@@ -44,11 +44,11 @@
         </div>
         <div class="label">Subject:</div>
         <div class="field">
-            <input type="text" name="subject" title="Please enter your name">
+            <input type="text" name="subject" title="Please enter the reason for your message">
         </div>
         <div class="label">Contact Number:</div>
         <div class="field">
-            <input type="text" name="phone" title="Please enter your phone number">
+            <input type="text" name="contactNumber" title="Please enter your phone number">
         </div>
         <div class="label">Message:</div>
         <div class="field">

@@ -2,3 +2,4 @@
 /.idea/
 /EazilyLed.iml
 /target/
+/src/main/resources/mailSenderBean.xml
