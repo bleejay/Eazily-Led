@@ -12,7 +12,8 @@ import java.util.List;
 @Component
 public class ProjectRepository {
 
-    public static final List<Project> ALL_PROJECTS = streamReader("C:\\Users\\danth\\IdeaProjects\\Eazily-Led\\src\\main\\resources\\Projects.csv");
+    private static String filepath = new File("").getAbsolutePath();
+    public static final List<Project> ALL_PROJECTS = streamReader(filepath.concat("/src/main/resources/Projects.csv"));
 
     public Project findByTitle(String title){
         for (Project project : ALL_PROJECTS) {
