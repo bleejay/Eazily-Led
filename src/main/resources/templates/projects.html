@@ -36,41 +36,41 @@
 
 
 <div class = "container">
-        <div th:each="project : ${projects}">
-            <div th:if="${project.id %2 != 0}">
-                <div class="row" style="padding:2% 6% 1% 6%">
-                    <div class="col-md-4" style="margin:auto">
-                        <a th:href="@{'/projects/' + ${project.title}}">
-                            <img class="img-thumbnail" th:src="@{'/images/' + ${project.title} + '.jpg'}" style=" max-height: 100%"/>
-                        </a>
-                    </div>
-                    <div class="col-md-8" style="margin:auto">
-                        <a th:href="@{'/projects/' + ${project.title}}">
-                            <h4 th:text="${project.title}"></h4>
-                        </a>
-                        <h5 th:text="'Uploaded on ' + ${project.date}"></h5>
-                        <p th:text="${project.smallDescription}"></p>
-                    </div>
+    <div th:each="project : ${projects}">
+        <div th:if="${project.id %2 != 0}">
+            <div class="row" style="padding:2% 6% 1% 6%">
+                <div class="col-md-4" style="margin:auto">
+                    <a th:href="@{'/projects/' + ${project.title}}">
+                        <img class="img-thumbnail" th:src="@{'/images/' + ${project.title} + '.jpg'}" style=" max-height: 100%"/>
+                    </a>
+                </div>
+                <div class="col-md-8" style="margin:auto">
+                    <a th:href="@{'/projects/' + ${project.title}}">
+                        <h4 th:text="${project.title}"></h4>
+                    </a>
+                    <h5 th:text="'Uploaded on ' + ${project.date}"></h5>
+                    <p th:text="${project.smallDescription}"></p>
                 </div>
             </div>
-            <div th:if="${project.id %2 == 0}">
-                <div class="row" style="padding:2% 6% 1% 6%">
-                    <div class="col-md-8" style="margin:auto">
-                        <a th:href="@{'/projects/' + ${project.title}}">
-                            <h4 th:text="${project.title}"></h4>
-                        </a>
-                        <h5 th:text="'Uploaded on ' + ${project.date}"></h5>
-                        <p th:text="${project.smallDescription}"></p>
-                    </div>
-                    <div class="col-md-4" style="margin:auto">
-                        <a th:href="@{'/projects/' + ${project.title}}">
-                            <img class="img-thumbnail" th:src="@{'/images/' + ${project.title} + '.jpg'}" style=" max-height: 100%" />
-                        </a>
-                    </div>
+        </div>
+        <div th:if="${project.id %2 == 0}">
+            <div class="row" style="padding:2% 6% 1% 6%">
+                <div class="col-md-8" style="margin:auto">
+                    <a th:href="@{'/projects/' + ${project.title}}">
+                        <h4 th:text="${project.title}"></h4>
+                    </a>
+                    <h5 th:text="'Uploaded on ' + ${project.date}"></h5>
+                    <p th:text="${project.smallDescription}"></p>
+                </div>
+                <div class="col-md-4" style="margin:auto">
+                    <a th:href="@{'/projects/' + ${project.title}}">
+                        <img class="img-thumbnail" th:src="@{'/images/' + ${project.title} + '.jpg'}" style=" max-height: 100%" />
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 </body>

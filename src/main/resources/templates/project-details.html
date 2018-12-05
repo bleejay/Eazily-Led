@@ -6,7 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="../grid.css">
 
     <title th:text="'Eazily-LED | ' + ${project.title}">Eazily-LED | Home</title>
 </head>
@@ -35,16 +35,24 @@
 </nav>
 
 <div class="container">
-    <div class="row" style="padding:2% 6% 1% 6%">
+    <div class="row" style="padding:2% 6% 1% 6%; text-align:center">
         <div class="col-md-12">
             <h1 th:text="${project.title}"></h1>
         </div>
-        <div class="row" style="padding:2% 6% 1% 6%">
-            <img th:src="@{'/images/' + ${project.title} + '.jpg'}" style="margin:auto"/>
-        </div>
-        <div class="row" style="padding:2% 6% 1% 6%">
-            <p th:text="${project.largeDescription}"></p>
-        </div>
+    </div>
+    <div class="row" style="padding:2% 6% 1% 6%">
+        <img th:src="@{'/images/' + ${project.title} + '.jpg'}" style="margin:auto"/>
+    </div>
+    <div class="row" style="padding:2% 6% 1% 6%">
+        <p th:text="${project.largeDescription}"></p>
+    </div>
+    <div class="grid" style="padding:0% 6% 1% 6%">
+        <img th:src="@{'/images/' + ${project.title} + '/1.jpg'}"/>
+        <img th:src="@{'/images/' + ${project.title} + '/2.jpg'}"/>
+        <img th:src="@{'/images/' + ${project.title} + '/3.jpg'}"/>
+        <img th:src="@{'/images/' + ${project.title} + '/4.jpg'}"/>
+        <img th:src="@{'/images/' + ${project.title} + '/5.jpg'}"/>
+        <img th:src="@{'/images/' + ${project.title} + '/6.jpg'}"/>
     </div>
 </div>
 
