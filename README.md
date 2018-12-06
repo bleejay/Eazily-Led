@@ -55,8 +55,11 @@ To deploy this site to Heroku you will need to create an account and down load t
 Then run the following commands:
 
 `heroku login`
+
 `heroku create <APPNAME> --<REGION>`
+
 `heroku plugin:install java`
+
 `heroku deploy:jar target/Eazily-Led-1.0-SNAPSHOT.jar --app <APPNAME> --includes src`
  
 And to view the running web app use the command:
