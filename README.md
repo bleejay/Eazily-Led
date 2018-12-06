@@ -54,16 +54,16 @@ The site will now be running on port 8080, and can be accessed on local host.
 To deploy this site to Heroku you will need to create an account and down load the heroku cli found [here](https://devcenter.heroku.com/articles/heroku-cli)
 Then run the following commands:
 
-`heroku login
- heroku create <APPNAME> --<REGION>
- heroku plugin:install java
- heroku deploy:jar target/Eazily-Led-1.0-SNAPSHOT.jar --app <APPNAME> --includes src`
+`heroku login`
+`heroku create <APPNAME> --<REGION>`
+`heroku plugin:install java`
+`heroku deploy:jar target/Eazily-Led-1.0-SNAPSHOT.jar --app <APPNAME> --includes src`
  
- And to view the running web app use the command:
+And to view the running web app use the command:
  
- `heroku open`
+`heroku open`
  
- or just go to APPNAME.herokuapp.com
+or just go to APPNAME.herokuapp.com
 
 ## Authors
 
