@@ -17,24 +17,24 @@ In order to allow this application to run fully, you will need to create a mailS
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-        <property name="host" value="smtp.gmail.com" />
-        <property name="port" value="587" />
-        <property name="username" value="<USERNAME>" />
-        <property name="password" value="<PASSWORD>" />
+        <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+            <property name="host" value="smtp.gmail.com" />
+            <property name="port" value="587" />
+            <property name="username" value="<USERNAME>" />
+            <property name="password" value="<PASSWORD>" />
 
-        <property name="javaMailProperties">
-            <props>
-                <prop key="mail.smtp.auth">true</prop>
-                <prop key="mail.smtp.starttls.enable">true</prop>
-                <prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
-            </props>
-        </property>
+            <property name="javaMailProperties">
+                <props>
+                    <prop key="mail.smtp.auth">true</prop>
+                    <prop key="mail.smtp.starttls.enable">true</prop>
+                    <prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
+                </props>
+            </property>
 
-    </bean>
-    <bean id="SimpleEmailSender" class="com.jlb.model.SimpleEmailSender">
-        <property name="mailSender" ref="mailSender" />
-    </bean>
+        </bean>
+        <bean id="SimpleEmailSender" class="com.jlb.model.SimpleEmailSender">
+            <property name="mailSender" ref="mailSender" />
+        </bean>
 
     </beans>
 
