@@ -11,11 +11,11 @@ This is the creation of a simple website built using spring. The contents of thi
 
 In order to allow this application to run fully, you will need to create a mailSenderBean.xml file in src/main/resources which has the following format:
 
-`<?xml version = "1.0" encoding = "UTF-8"?>
-<beans xmlns = "http://www.springframework.org/schema/beans"
+    <?xml version = "1.0" encoding = "UTF-8"?>
+    <beans xmlns = "http://www.springframework.org/schema/beans"
        xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
         <property name="host" value="smtp.gmail.com" />
@@ -36,7 +36,7 @@ In order to allow this application to run fully, you will need to create a mailS
         <property name="mailSender" ref="mailSender" />
     </bean>
 
-</beans>`
+    </beans>
 
 Once the bean file has been created you will also need to download and setup the maven cli, which can be found [here](https://maven.apache.org/download.cgi)
 
